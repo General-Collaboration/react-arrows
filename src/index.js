@@ -3,9 +3,9 @@ import { memo } from 'react'
 import useArrow from './hooks/useArrow'
 
 const Arrow = ({
-  className, head, from, to, onChange,
+  className, head, from, to, onChange, root = document.body
 }) => {
-  useArrow({ className, head, from, to, onChange })
+  useArrow({ className, head, from, to, onChange, root })
   return null
 }
 

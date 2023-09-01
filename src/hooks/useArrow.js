@@ -4,7 +4,7 @@ import arrowCreate from 'arrows-svg'
 import { nodeSafe } from '../helpers/node'
 import useObserver from './useObserver'
 
-const useArrow = ({ className, head, from, to, onChange }) => {
+const useArrow = ({ className, head, from, to, onChange, root = document.body }) => {
   const mounted = useObserver({ from, to })
   const arrowRef = useRef();
 
@@ -37,7 +37,7 @@ const useArrow = ({ className, head, from, to, onChange }) => {
       return;
     }
 
-    document.body.appendChild(arrowRef.current.node)
+    root.appendChild(arrowRef.current.node)
 
     return () => {
       arrowRef.current.clear()
