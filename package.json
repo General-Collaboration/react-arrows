@@ -12,7 +12,8 @@
   "scripts": {
     "build": "webpack --mode=production",
     "lint": "eslint src --fix",
-    "storybook": "start-storybook"
+    "storybook": "start-storybook",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
